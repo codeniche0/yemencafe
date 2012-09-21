@@ -1,5 +1,7 @@
 $(function() {
 
+    if ($('#menu').length == 0) return;
+
     var $groups = $('#menu-groups li');
 
     $('#menu-items ul').hide();

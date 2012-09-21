@@ -5,7 +5,9 @@ Fix hours for cobble hill location
 Add the same words as on menu
 Make header and footer background consistent
 
-Paper texture the menu.
 Add nav links active and hover styles.
 
 Forget the background picture for now. It's fudging everything up. Standarize the styles.
+
+Make logo background shale color.
+Condense logo vertically.

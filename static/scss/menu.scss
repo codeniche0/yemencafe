@@ -1,13 +1,16 @@
-#menu {
-    background: #e0d0a0;
+#main {
+    height: auto;
+    overflow-y: auto;
     background: url("../imgs/textures/paper.jpg") top left repeat;
-    /* min-height: 800px; */
-    /* height: 400px; */
-    overflow-y: scroll;
 }
 
 #footer {
-    /* position: relative; */
+    position: relative;
+}
+
+#menu {
+    min-height: 400px;
+    background: url("../imgs/textures/paper1.png") top left repeat;
 }
 
 #menu ul {
@@ -57,7 +60,7 @@
 
 .food-price {
     position: absolute;
-    top: 0; right: 0;
+    top: -6px; right: 0;
 }
 
 .food-info {

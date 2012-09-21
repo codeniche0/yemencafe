@@ -5,8 +5,25 @@ $color_black: #000000;
 $color_white: #ffffff;
 $color_cloud: #d8d8d8;
 $color_shale: #101013;
+$color_shale_light: #202026;
 $color_sun: #ffe800;
 $color_spice: #d0a830;
+$color_driedorange: #e87020;
+
+@mixin outline {
+    outline: 1px solid red;
+}
+
+@mixin vertical-gradient($startcolor, $endcolor) {
+    background-color: $startcolor;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($startcolor), to($endcolor)); // Saf4+, Chrome
+    background-image: -webkit-linear-gradient(top, $startcolor, $endcolor); // Chrome 10+, Saf5.1+, iOS 5+
+    background-image:    -moz-linear-gradient(top, $startcolor, $endcolor); // FF3.6
+    background-image:     -ms-linear-gradient(top, $startcolor, $endcolor); // IE10
+    background-image:      -o-linear-gradient(top, $startcolor, $endcolor); // Opera 11.10+
+    background-image:         linear-gradient(to bottom, $startcolor, $endcolor); // CSS3
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); // IE9
+}
 
 body {
     font-family: georgia, times, serif;
@@ -20,7 +37,7 @@ h1, h2 {font-weight: normal;}
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 800px;
+    min-height: 860px;
     overflow-y: hidden;
 }
 
@@ -28,6 +45,7 @@ h1, h2 {font-weight: normal;}
     position: absolute;
     top: 0; left: 0;
     width: 100%;
+    height: 100%;
 }
 
 .inner-block {
@@ -37,41 +55,54 @@ h1, h2 {font-weight: normal;}
 
 #header {
     position: relative;
-    box-shadow: 0 1px 8px 0 #444;
+    box-shadow: 0 1px 8px 0 $color_black;
 }
 
 #banner {
     position: relative;
     width: 100%;
-    padding: 20px 0 16px 0;
-    background: $color_black;
+    padding: 20px 0 18px 0;
+    background: $color_shale_light;
     img {
         display: block;
         margin: 0 auto;
+        /* margin-left: 460px; */
     }
     .logo-img {
         padding-top: 10px;
         max-width: 200px;
     }
-    .logo-text {max-width: 800px;}
+    .logo-text {
+        margin-top: 12px;
+        width: $width;
+    }
+}
+
+.blinder {
+    background: #111;
+    position: absolute;
+    width: 400px; height: 100%;
+    top: 0;
+    &.left {left: 0; border-right: 1px solid #222;}
+    &.right {right: 0; border-left: 1px solid #222;}
 }
 
 #nav {
     margin: 0 0 0 0;
-    border-top: 4px solid $color_sun;
     padding: 0;
+    border-bottom: 4px solid lighten($color_sun, 10%);
     font-size: 0;
-    background: $color_spice;
+    @include vertical-gradient(lighten($color_driedorange, 7%), darken($color_driedorange, 3%));
     ul {
         width: $width;
         margin: 0 auto;
         padding: 0;
-        text-align: center;
+        /* text-align: center; */
     }
     li {
         display: inline-block;
         list-style-type: none;
-        width: 19%;
+        width: ($width / 5) - 10px;
         padding: 0;
         margin: 0;
         opacity: 0.8;
@@ -81,17 +112,22 @@ h1, h2 {font-weight: normal;}
         a {
             text-decoration: none;
             color: $color_black;
+            &:hover {border-bottom: 2px solid lighten($color_shale, 4%);}
+            &:active {
+                color: $color_white;
+                border-bottom: 2px solid $color_white;
+            }
         }
     }
 }
 
 #content {
     position: relative;
+    /* height: 100%; */
     min-height: 400px;
     .big-quote {
-        /* margin: 0 auto; */
-        /* outline: 1px solid red; */
-        margin: {top: 40px}
+        margin: 0;
+        padding-top: 40px;
     }
 }
 
@@ -118,7 +154,7 @@ h1, h2 {font-weight: normal;}
     }
     .col {
         width: 280px;
-        &:first-child {margin-left: 80px;}
+        /* &:first-child {margin-left: 80px;} */
     }
 }
 
@@ -135,18 +171,9 @@ h1, h2 {font-weight: normal;}
     height: 100%;
 }
 
+.hide {display: none;}
+
 blockquote .leading-quote {
     position: absolute;
     left: -24px;
 }
-
-.outline {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    border-top: 1px solid #333;
-    &.top {top: 6px;}
-    &.bottom {bottom: 6px;}
-}
-
-@import "menu";

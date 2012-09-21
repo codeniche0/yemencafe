@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-# from conf import conf
+from conf import conf
 
 app = Flask(__name__)
 app.config.from_object(conf)

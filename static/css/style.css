@@ -10,14 +10,15 @@ h1, h2 {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 800px;
+  min-height: 860px;
   overflow-y: hidden; }
 
 .main-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .inner-block {
   width: 960px;
@@ -25,37 +26,59 @@ h1, h2 {
 
 #header {
   position: relative;
-  box-shadow: 0 1px 8px 0 #444; }
+  box-shadow: 0 1px 8px 0 black; }
 
 #banner {
   position: relative;
   width: 100%;
-  padding: 20px 0 16px 0;
-  background: black; }
+  padding: 20px 0 18px 0;
+  background: #202026; }
   #banner img {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    /* margin-left: 460px; */ }
   #banner .logo-img {
     padding-top: 10px;
     max-width: 200px; }
   #banner .logo-text {
-    max-width: 800px; }
+    margin-top: 12px;
+    width: 960px; }
+
+.blinder {
+  background: #111;
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  top: 0; }
+  .blinder.left {
+    left: 0;
+    border-right: 1px solid #222; }
+  .blinder.right {
+    right: 0;
+    border-left: 1px solid #222; }
 
 #nav {
   margin: 0 0 0 0;
-  border-top: 4px solid #ffe800;
   padding: 0;
+  border-bottom: 4px solid #ffed33;
   font-size: 0;
-  background: #d0a830; }
+  background-color: #eb8540;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb8540), to(#e16817));
+  background-image: -webkit-linear-gradient(top, #eb8540, #e16817);
+  background-image: -moz-linear-gradient(top, #eb8540, #e16817);
+  background-image: -ms-linear-gradient(top, #eb8540, #e16817);
+  background-image: -o-linear-gradient(top, #eb8540, #e16817);
+  background-image: linear-gradient(to bottom, #eb8540, #e16817);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); }
   #nav ul {
     width: 960px;
     margin: 0 auto;
     padding: 0;
-    text-align: center; }
+    /* text-align: center; */ }
   #nav li {
     display: inline-block;
     list-style-type: none;
-    width: 19%;
+    width: 182px;
     padding: 0;
     margin: 0;
     opacity: 0.8;
@@ -65,14 +88,19 @@ h1, h2 {
     #nav li a {
       text-decoration: none;
       color: black; }
+      #nav li a:hover {
+        border-bottom: 2px solid #19191e; }
+      #nav li a:active {
+        color: white;
+        border-bottom: 2px solid white; }
 
 #content {
   position: relative;
+  /* height: 100%; */
   min-height: 400px; }
   #content .big-quote {
-    /* margin: 0 auto; */
-    /* outline: 1px solid red; */
-    margin-top: 40px; }
+    margin: 0;
+    padding-top: 40px; }
 
 .big-quote {
   position: relative;
@@ -94,9 +122,8 @@ h1, h2 {
     font-size: 16px;
     margin: 10px 0; }
   #footer .col {
-    width: 280px; }
-    #footer .col:first-child {
-      margin-left: 80px; }
+    width: 280px;
+    /* &:first-child {margin-left: 80px;} */ }
 
 #inner-footer {
   padding: 18px 0; }
@@ -110,80 +137,9 @@ h1, h2 {
   width: 100%;
   height: 100%; }
 
+.hide {
+  display: none; }
+
 blockquote .leading-quote {
   position: absolute;
   left: -24px; }
-
-.outline {
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  border-top: 1px solid #333; }
-  .outline.top {
-    top: 6px; }
-  .outline.bottom {
-    bottom: 6px; }
-
-#menu {
-  background: #e0d0a0;
-  background: url("../imgs/textures/paper.jpg") top left repeat;
-  /* min-height: 800px; */
-  /* height: 400px; */
-  overflow-y: scroll; }
-
-#footer {
-  /* position: relative; */ }
-
-#menu ul {
-  margin: 0;
-  padding: 0; }
-
-#menu li {
-  list-style-type: none;
-  margin: 10px 0; }
-
-#menu #menu-groups {
-  margin: 10px 80px 0 0;
-  padding: 10px 16px; }
-
-#menu-groups {
-  width: 180px; }
-
-#menu-groups li {
-  cursor: pointer;
-  padding: 6px 20px;
-  margin: 0;
-  /* color: #eee; */ }
-
-#menu-items {
-  margin-top: 10px;
-  width: 640px;
-  position: relative; }
-
-#menu-items li {
-  position: relative;
-  margin: 18px 0; }
-
-#menu-items li > div {
-  margin: 4px 0; }
-
-.food-name {
-  font-weight: bold; }
-
-.food-price {
-  position: absolute;
-  top: 0;
-  right: 0; }
-
-.food-info {
-  clear: both;
-  /* padding-top: 6px; */
-  width: 510px; }
-
-#menu-groups .hover {
-  background: #333;
-  color: #fff; }
-
-#menu-groups .active {
-  font-weight: bold;
-  text-decoration: underline; }

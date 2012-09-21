@@ -5,13 +5,18 @@
   <title>Yemen Cafe & Restaurant</title>
   <link rel="stylesheet" href="static/css/normalize.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen" />
+  {% if subpage == "menu.html" %}
+    <link rel="stylesheet" href="static/css/menu.css" type="text/css" media="screen" />
+  {% endif %}
 </head>
 
 <body id="body">
 
   <div id="main">
 
-    <img src="static/imgs/bg/bg_food.png" class="main-bg" />
+    {% if subpage != "menu.html" %}
+      <img src="static/imgs/bg/bg_food.png" class="main-bg" />
+    {% endif %}
 
     <div id="header">
       <div id="banner">
@@ -32,14 +37,13 @@
     </div>
 
     <div id="content">
+      <!-- <img src="static/imgs/bg/bg_food.png" class="main-bg" /> -->
       <div id="inner-content" class="inner-block">
         {% include subpage %}
       </div>
     </div>
 
     <div id="footer">
-      <!-- <div class="outline top"></div> -->
-      <!-- <div class="outline bottom"></div> -->
       <div id="inner-footer" class="inner-block">
         <div class="col">
           <h2>Cobble Hill Location</h2>
@@ -61,8 +65,12 @@
 
   </div>
 
+  <!-- <div class="blinder left"></div> -->
+  <!-- <div class="blinder right"></div> -->
+
   <script type="application/javascript" src="static/js/jquery.min.js"></script>
   <script type="application/javascript" src="static/js/underscore.min.js"></script>
+  <script type="application/javascript" src="static/js/menu.js"></script>
 
 </body>
 </html>
