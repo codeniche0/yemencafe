@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+  <title>Yemen Cafe & Restaurant</title>
+  <link rel="stylesheet" href="static/css/normalize.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen" />
+</head>
+
+<body id="body">
+
+  <div id="main">
+
+    <img src="static/imgs/bg/bg_food.png" class="main-bg" />
+
+    <div id="header">
+      <div id="banner">
+        <a href="home.html">
+          <img src="static/imgs/logos/logo_yellow_img.png" class="logo-img" />
+          <img src="static/imgs/logos/logo_yellow_text.png" class="logo-text" />
+        </a>
+      </div>
+      <div id="nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="inner-content" class="inner-block">
+        {% include subpage %}
+      </div>
+    </div>
+
+    <div id="footer">
+      <!-- <div class="outline top"></div> -->
+      <!-- <div class="outline bottom"></div> -->
+      <div id="inner-footer" class="inner-block">
+        <div class="col">
+          <h2>Cobble Hill Location</h2>
+          <p class="address">176 Atlantic Ave, Brooklyn, NY 11201</p>
+          <p class="phone-number">(718) 834-9533</p>
+        </div>
+        <div class="col">
+          <h2>Bay Ridge Location</h2>
+          <p class="address">7130 5th Ave, Brooklyn, NY 11209</p>
+          <p class="phone-number">(718) 745-3000</p>
+          <p class="phone-number">(718) 745-8000</p>
+        </div>
+        <div class="col">
+          <h2>Hours</h2>
+          <p class="hours">Open every day 10am to 11pm</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="application/javascript" src="static/js/jquery.min.js"></script>
+  <script type="application/javascript" src="static/js/underscore.min.js"></script>
+
+</body>
+</html>

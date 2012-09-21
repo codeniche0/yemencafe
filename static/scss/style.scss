@@ -1,0 +1,152 @@
+$fontsize_base: 16px;
+$fontsize_small: 13px;
+$width: 960px;
+$color_black: #000000;
+$color_white: #ffffff;
+$color_cloud: #d8d8d8;
+$color_shale: #101013;
+$color_sun: #ffe800;
+$color_spice: #d0a830;
+
+body {
+    font-family: georgia, times, serif;
+    font-size: $fontsize_base;
+    background: #111;
+}
+
+h1, h2 {font-weight: normal;}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    overflow-y: hidden;
+}
+
+.main-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+}
+
+.inner-block {
+    width: $width;
+    margin: 0 auto;
+}
+
+#header {
+    position: relative;
+    box-shadow: 0 1px 8px 0 #444;
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    padding: 20px 0 16px 0;
+    background: $color_black;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .logo-img {
+        padding-top: 10px;
+        max-width: 200px;
+    }
+    .logo-text {max-width: 800px;}
+}
+
+#nav {
+    margin: 0 0 0 0;
+    border-top: 4px solid $color_sun;
+    padding: 0;
+    font-size: 0;
+    background: $color_spice;
+    ul {
+        width: $width;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+    li {
+        display: inline-block;
+        list-style-type: none;
+        width: 19%;
+        padding: 0;
+        margin: 0;
+        opacity: 0.8;
+        padding: 8px 0;
+        font-size: 16px;
+        font-weight: bold;
+        a {
+            text-decoration: none;
+            color: $color_black;
+        }
+    }
+}
+
+#content {
+    position: relative;
+    min-height: 400px;
+    .big-quote {
+        /* margin: 0 auto; */
+        /* outline: 1px solid red; */
+        margin: {top: 40px}
+    }
+}
+
+.big-quote {
+    position: relative;
+    color: $color_white;
+    font-size: 48px;
+    text-shadow: 0 1px 2px $color_black;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 200px;
+    font-size: $fontsize_small;
+    border-top: 4px solid lighten($color_spice, 3%);
+    background: $color_shale;
+    color: $color_cloud;
+    h2 {
+        font-weight: bold;
+        font-size: $fontsize_base;;
+        margin: 10px 0;
+    }
+    .col {
+        width: 280px;
+        &:first-child {margin-left: 80px;}
+    }
+}
+
+#inner-footer {padding: 18px 0;}
+
+.col {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+}
+
+.stretch {
+    width: 100%;
+    height: 100%;
+}
+
+blockquote .leading-quote {
+    position: absolute;
+    left: -24px;
+}
+
+.outline {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    border-top: 1px solid #333;
+    &.top {top: 6px;}
+    &.bottom {bottom: 6px;}
+}
+
+@import "menu";
