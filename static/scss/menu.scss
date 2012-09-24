@@ -4,59 +4,55 @@
     background: url("../imgs/textures/paper.jpg") top left repeat;
 }
 
-#footer {
-    position: relative;
-}
+#footer {position: relative;}
 
 #menu {
     min-height: 400px;
-    background: url("../imgs/textures/paper1.png") top left repeat;
-}
-
-#menu ul {
-    margin: 0;
-    padding: 0;
-}
-
-#menu li {
-    list-style-type: none;
-    margin: 10px 0;
-}
-
-#menu #menu-groups {
-    margin: 10px 80px 0 0;
-    padding: 10px 16px;
+    background: url("../imgs/textures/scroll.png") top left repeat;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+        margin: 10px 0;
+    }
+    #menu-groups {
+        margin: 10px 80px 0 0;
+        padding: 10px 16px;
+    }
 }
 
 #menu-groups {
     width: 180px;
-}
-
-#menu-groups li {
-    cursor: pointer;
-    padding: 6px 20px;
-    margin: 0;
-    /* color: #eee; */
+    li {
+        cursor: pointer;
+        padding: 6px 20px;
+        margin: 0;
+        /* color: #eee; */
+    }
+    & .hover {
+        background: #333;
+        color: #fff;
+    }
+    & .active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
 }
 
 #menu-items {
     margin-top: 10px;
     width: 640px;
     position: relative;
+    li {
+        position: relative;
+        margin: 18px 0;
+        & > div {margin: 4px 0;}
+    }
 }
 
-#menu-items li {
-    position: relative;
-    margin: 18px 0;
-}
-
-#menu-items li > div {
-    margin: 4px 0;
-}
-
-.food-name {
-    font-weight: bold;
-}
+.food-name {font-weight: bold;}
 
 .food-price {
     position: absolute;
@@ -65,16 +61,5 @@
 
 .food-info {
     clear: both;
-    /* padding-top: 6px; */
     width: 510px;
-}
-
-#menu-groups .hover {
-    background: #333;
-    color: #fff;
-}
-
-#menu-groups .active {
-    font-weight: bold;
-    text-decoration: underline;
 }

@@ -1,4 +1,5 @@
 $fontsize_base: 16px;
+$fontsize_big: 18px;
 $fontsize_small: 13px;
 $width: 960px;
 $color_black: #000000;
@@ -9,6 +10,7 @@ $color_shale_light: #202026;
 $color_sun: #ffe800;
 $color_spice: #d0a830;
 $color_driedorange: #e87020;
+$color_link_new: #169;
 
 @mixin outline {
     outline: 1px solid red;
@@ -25,11 +27,25 @@ $color_driedorange: #e87020;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); // IE9
 }
 
+@mixin box-shadow($values) {
+    -moz-box-shadow: $values;       // Firefox
+    -webkit-box-shadow: $values;    // Safari, Chrome
+    box-shadow: $values;            // CSS3
+}
+
 body {
     font-family: georgia, times, serif;
     font-size: $fontsize_base;
     background: #111;
 }
+
+a {
+    text-decoration: none;
+    color: $color_link_new;
+    &:hover {text-decoration: underline;}
+}
+
+p {line-height: 1.6em;}
 
 h1, h2 {font-weight: normal;}
 
@@ -37,7 +53,8 @@ h1, h2 {font-weight: normal;}
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 860px;
+    /* min-height: 860px; */
+    min-height: 920px;
     overflow-y: hidden;
 }
 
@@ -55,7 +72,7 @@ h1, h2 {font-weight: normal;}
 
 #header {
     position: relative;
-    box-shadow: 0 1px 8px 0 $color_black;
+    @include box-shadow(0 1px 8px 0 $color_black);
 }
 
 #banner {
@@ -110,9 +127,11 @@ h1, h2 {font-weight: normal;}
         font-size: 16px;
         font-weight: bold;
         a {
-            text-decoration: none;
             color: $color_black;
-            &:hover {border-bottom: 2px solid lighten($color_shale, 4%);}
+            &:hover {
+                text-decoration: none;
+                border-bottom: 2px solid lighten($color_shale, 4%);
+            }
             &:active {
                 color: $color_white;
                 border-bottom: 2px solid $color_white;
@@ -148,9 +167,9 @@ h1, h2 {font-weight: normal;}
     background: $color_shale;
     color: $color_cloud;
     h2 {
-        font-weight: bold;
-        font-size: $fontsize_base;;
         margin: 10px 0;
+        font-size: $fontsize_base;
+        font-weight: bold;
     }
     .col {
         width: 280px;
@@ -158,7 +177,7 @@ h1, h2 {font-weight: normal;}
     }
 }
 
-#inner-footer {padding: 18px 0;}
+#inner-footer {position: relative; padding: 18px 0;}
 
 .col {
     display: inline-block;
@@ -171,9 +190,103 @@ h1, h2 {font-weight: normal;}
     height: 100%;
 }
 
+.dull {
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.spaceless {
+    margin: 0;
+    padding: 0;
+}
+
 .hide {display: none;}
 
 blockquote .leading-quote {
     position: absolute;
     left: -24px;
 }
+
+.fitted-page {
+    position: relative;
+    min-height: 9999px;
+    padding: 20px 36px 20px 36px;
+    background: url("../imgs/textures/scroll.png") top left repeat;
+    p {
+        margin: 0;
+        padding: 8px 0;
+    }
+}
+
+#about-page {
+    p {font-size: $fontsize_big;}
+    .motto {
+        margin: {bottom: 8px; left: -8px};
+        padding-bottom: 16px;
+        text-align: center;
+        font-size: $fontsize_base;
+        font-weight: bold;
+        border-bottom: 1px dashed $color_shale;
+    }
+}
+
+#contact-page {
+    p {font-size: $fontsize_base;}
+    .first {margin-bottom: 12px;}
+    .col {
+        width: 45.5%;
+        padding: 8px 14px 10px 14px;
+        background: #fdfdff;
+        border-radius: 6px;
+        &.second {float: right;}
+        @include box-shadow(0 0 12px 0 #8a8a8a);
+    }
+    /* .col + .col {margin-left: 16px;} */
+    h2 {
+        margin: 0;
+        padding: 8px 0;
+        font-size: $fontsize_base;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    iframe {
+        width: 100%; height: 200px;
+        margin-top: 3px;
+    }
+    a {font-weight: bold;}
+    .hr {margin: 32px 0 24px 0;}
+}
+
+.icon-links {
+    position: absolute;
+    top: 0; right: 0px;
+    padding: 6px;
+    background: #fafafa;
+    @include box-shadow(0 2px 8px 0 lighten($color_shale, 16%));
+    border-radius: 0 0 2px 2px;
+    .icon {display: block;}
+    .icon + .icon {margin-top: 6px;}
+}
+
+.map {display: block;}
+
+.hr {
+    border-top: 1px dashed $color_shale;
+    margin: 12px 0;
+}
+
+.icon {
+    display: inline-block;
+    width: 32px; height: 32px;
+}
+
+.facebook-icon {
+    background: url("../imgs/icons/icons.png") 0 0 no-repeat;
+}
+
+.yelp-icon {
+    background: url("../imgs/icons/icons.png") -32px 0 no-repeat;
+}
+
+.invisible {visibility: hidden;}

@@ -3,6 +3,15 @@ body {
   font-size: 16px;
   background: #111; }
 
+a {
+  text-decoration: none;
+  color: #116699; }
+  a:hover {
+    text-decoration: underline; }
+
+p {
+  line-height: 1.6em; }
+
 h1, h2 {
   font-weight: normal; }
 
@@ -10,7 +19,8 @@ h1, h2 {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 860px;
+  /* min-height: 860px; */
+  min-height: 920px;
   overflow-y: hidden; }
 
 .main-bg {
@@ -26,6 +36,8 @@ h1, h2 {
 
 #header {
   position: relative;
+  -moz-box-shadow: 0 1px 8px 0 black;
+  -webkit-box-shadow: 0 1px 8px 0 black;
   box-shadow: 0 1px 8px 0 black; }
 
 #banner {
@@ -86,9 +98,9 @@ h1, h2 {
     font-size: 16px;
     font-weight: bold; }
     #nav li a {
-      text-decoration: none;
       color: black; }
       #nav li a:hover {
+        text-decoration: none;
         border-bottom: 2px solid #19191e; }
       #nav li a:active {
         color: white;
@@ -118,14 +130,15 @@ h1, h2 {
   background: #101013;
   color: #d8d8d8; }
   #footer h2 {
-    font-weight: bold;
+    margin: 10px 0;
     font-size: 16px;
-    margin: 10px 0; }
+    font-weight: bold; }
   #footer .col {
     width: 280px;
     /* &:first-child {margin-left: 80px;} */ }
 
 #inner-footer {
+  position: relative;
   padding: 18px 0; }
 
 .col {
@@ -137,9 +150,105 @@ h1, h2 {
   width: 100%;
   height: 100%; }
 
+.dull {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none; }
+
+.spaceless {
+  margin: 0;
+  padding: 0; }
+
 .hide {
   display: none; }
 
 blockquote .leading-quote {
   position: absolute;
   left: -24px; }
+
+.fitted-page {
+  position: relative;
+  min-height: 9999px;
+  padding: 20px 36px 20px 36px;
+  background: url("../imgs/textures/scroll.png") top left repeat; }
+  .fitted-page p {
+    margin: 0;
+    padding: 8px 0; }
+
+#about-page p {
+  font-size: 18px; }
+#about-page .motto {
+  margin-bottom: 8px;
+  margin-left: -8px;
+  padding-bottom: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px dashed #101013; }
+
+#contact-page {
+  /* .col + .col {margin-left: 16px;} */ }
+  #contact-page p {
+    font-size: 16px; }
+  #contact-page .first {
+    margin-bottom: 12px; }
+  #contact-page .col {
+    width: 45.5%;
+    padding: 8px 14px 10px 14px;
+    background: #fdfdff;
+    border-radius: 6px;
+    -moz-box-shadow: 0 0 12px 0 #8a8a8a;
+    -webkit-box-shadow: 0 0 12px 0 #8a8a8a;
+    box-shadow: 0 0 12px 0 #8a8a8a; }
+    #contact-page .col.second {
+      float: right; }
+  #contact-page h2 {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline; }
+  #contact-page iframe {
+    width: 100%;
+    height: 200px;
+    margin-top: 3px; }
+  #contact-page a {
+    font-weight: bold; }
+  #contact-page .hr {
+    margin: 32px 0 24px 0; }
+
+.icon-links {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  padding: 6px;
+  background: #fafafa;
+  -moz-box-shadow: 0 2px 8px 0 #35353f;
+  -webkit-box-shadow: 0 2px 8px 0 #35353f;
+  box-shadow: 0 2px 8px 0 #35353f;
+  border-radius: 0 0 2px 2px; }
+  .icon-links .icon {
+    display: block; }
+  .icon-links .icon + .icon {
+    margin-top: 6px; }
+
+.map {
+  display: block; }
+
+.hr {
+  border-top: 1px dashed #101013;
+  margin: 12px 0; }
+
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px; }
+
+.facebook-icon {
+  background: url("../imgs/icons/icons.png") 0 0 no-repeat; }
+
+.yelp-icon {
+  background: url("../imgs/icons/icons.png") -32px 0 no-repeat; }
+
+.invisible {
+  visibility: hidden; }
