@@ -7,7 +7,7 @@ app.config.from_object(conf)
 @app.route('/')
 @app.route('/<subpage>')
 def home(subpage='home.html'):
-    return render_template('body.html', subpage=subpage)
+    return render_template('main.html', subpage=subpage)
 
 if __name__ == '__main__':
     app.run()
