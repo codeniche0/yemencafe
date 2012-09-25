@@ -8,13 +8,16 @@
   {% if subpage == "menu.html" %}
     <link rel="stylesheet" href="static/css/menu.css" type="text/css" media="screen" />
   {% endif %}
+  {% if subpage == "gallery.html" %}
+    <link rel="stylesheet" href="static/css/gallery.css" type="text/css" media="screen" />
+  {% endif %}
 </head>
 
 <body id="body">
 
   <div id="main">
 
-    {% if subpage != "menu.html" %}
+    {% if subpage != "menu.html" and subpage != "gallery.html" %}
       <img src="static/imgs/bg/bg_food.png" class="main-bg" />
     {% endif %}
 
@@ -33,6 +36,13 @@
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        <div class="flag-bar">
+          <div class="inner">
+            <div class="flag-color red"></div>
+            <div class="flag-color white"></div>
+            <div class="flag-color black"></div>
+          </div>
+        </div>
       </div>
     </div>
 

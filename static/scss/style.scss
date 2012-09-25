@@ -7,10 +7,12 @@ $color_white: #ffffff;
 $color_cloud: #d8d8d8;
 $color_shale: #101013;
 $color_shale_light: #202026;
-$color_sun: #ffe800;
 $color_spice: #d0a830;
 $color_driedorange: #e87020;
 $color_link_new: #169;
+$color_yemen_red: #ff1020;
+$color_yemen_white: #ffffff;
+$color_yemen_black: #000000;
 
 @mixin outline {
     outline: 1px solid red;
@@ -105,10 +107,11 @@ h1, h2 {font-weight: normal;}
 }
 
 #nav {
+    position: relative;
     margin: 0;
     padding: 0;
     font-size: 0;
-    border-bottom: 4px solid lighten($color_sun, 10%);
+    border-bottom: 4px solid lighten($color_spice, 8%);
     @include vertical-gradient(lighten($color_driedorange, 7%), darken($color_driedorange, 3%));
     ul {
         width: $width;
@@ -234,12 +237,12 @@ blockquote .leading-quote {
     .col {
         width: 45.5%;
         padding: 8px 14px 10px 14px;
+        text-align: center;
+        color: #333;
         background: #fbfbfb;
-        border-radius: 6px;
+        @include box-shadow(0 0 16px #aaa);
         &.second {float: right;}
-        @include box-shadow(0 0 16px 0 #8a8a8a);
     }
-    /* .col + .col {margin-left: 16px;} */
     h2 {
         margin: 0;
         padding: 8px 0;
@@ -262,11 +265,13 @@ blockquote .leading-quote {
 
 .icon-links {
     position: absolute;
-    top: 0; right: 0px;
+    top: 0px; right: 0px;
     padding: 6px;
-    background: #fafafa;
-    @include box-shadow(0 2px 8px 0 lighten($color_shale, 16%));
-    border-radius: 0 0 2px 2px;
+    background: #ffffff;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #aaa;
+    border-top: none;
+    @include box-shadow(0 0px 2px #555 inset);
     .icon {display: block;}
     .icon + .icon {margin-top: 6px;}
 }
@@ -292,3 +297,21 @@ blockquote .leading-quote {
 }
 
 .invisible {visibility: hidden;}
+
+.flag-bar {
+    position: absolute;
+    width: 100%;
+    font-size: 0;
+    .inner {
+        width: 960px;
+        margin: 0 auto;
+    }
+    .flag-color {
+        display: inline-block;
+        width: $width / 3;
+    }
+}
+
+.flag-color.red {border-top: 4px solid $color_yemen_red;}
+.flag-color.white {border-top: 4px solid $color_yemen_white;}
+.flag-color.black {border-top: 4px solid $color_yemen_black;}

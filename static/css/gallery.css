@@ -1,0 +1,11 @@
+#main {
+  height: auto;
+  overflow-y: auto;
+  background: url("../imgs/textures/paper.jpg") top left repeat !important; }
+
+#footer {
+  position: relative; }
+
+#gallery {
+  min-height: 800px;
+  background: url("../imgs/textures/scroll.png") top left repeat; }
