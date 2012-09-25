@@ -193,20 +193,24 @@ blockquote .leading-quote {
 #contact-page .col {
   width: 45.5%;
   padding: 8px 14px 10px 14px;
-  text-align: center;
   color: #333;
   background: #fbfbfb;
   -moz-box-shadow: 0 0 16px #aaaaaa;
   -webkit-box-shadow: 0 0 16px #aaaaaa;
   box-shadow: 0 0 16px #aaaaaa; }
+  #contact-page .col p {
+    float: left; }
   #contact-page .col.second {
+    float: right; }
+  #contact-page .col .phone-number {
     float: right; }
 #contact-page h2 {
   margin: 0;
   padding: 8px 0;
   font-size: 16px;
-  font-weight: bold;
-  text-decoration: underline; }
+  color: #555;
+  text-shadow: 0 -1px 0 black;
+  border-bottom: 1px solid #ddd; }
 #contact-page iframe {
   width: 100%;
   height: 200px;
@@ -214,8 +218,9 @@ blockquote .leading-quote {
   background: #ddd; }
 #contact-page .map {
   display: block;
-  margin-top: 8px;
-  /* font-weight: bold; */ }
+  padding-top: 8px;
+  clear: both;
+  font-size: 13px; }
 #contact-page .hr {
   margin: 32px 0 24px 0; }
 
