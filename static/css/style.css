@@ -282,20 +282,20 @@ blockquote .leading-quote {
 #gallery {
   padding: 20px; }
   #gallery .pictures {
-    padding-left: 2px;
-    font-size: 0; }
+    font-size: 0;
+    text-align: center; }
     #gallery .pictures img {
       display: inline-block;
       width: 290px;
-      margin: 4px;
-      padding: 4px;
+      margin: 6px;
+      padding: 2px;
       cursor: pointer;
-      background: #ffffff;
-      -moz-box-shadow: 0 0 8px #333333;
-      -webkit-box-shadow: 0 0 8px #333333;
-      box-shadow: 0 0 8px #333333; }
+      background: #f8f8f8;
+      -moz-box-shadow: 0 6px 6px 0 #525252;
+      -webkit-box-shadow: 0 6px 6px 0 #525252;
+      box-shadow: 0 6px 6px 0 #525252; }
       #gallery .pictures img:hover {
-        background: #f60; }
+        background: #f70; }
 
 .blanket {
   display: none;
@@ -321,5 +321,4 @@ blockquote .leading-quote {
     .zoom .inner img {
       padding: 16px;
       background: #ffffff;
-      cursor: pointer;
-      /* @include box-shadow(0 0 16px #000 inset); */ }
+      cursor: pointer; }
