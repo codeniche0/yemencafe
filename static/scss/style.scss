@@ -234,15 +234,17 @@ blockquote .leading-quote {
 #contact-page {
     p {font-size: $fontsize_base;}
     .first {margin-bottom: 12px;}
-    .col {
-        width: 45.5%;
+    .info {margin-bottom: 10px;}
+    .block {
         padding: 8px 14px 10px 14px;
-        p {float: left;}
-        color: #333;
         background: #fbfbfb;
+        color: #333;
         @include box-shadow(0 0 16px #aaa);
-        &.second {float: right;}
-        .phone-number {float: right;}
+    }
+    .col {
+        width: 410px;
+        p {float: left;}
+        &.second, .phone-number {float: right;}
     }
     h2 {
         margin: 0;
@@ -271,10 +273,8 @@ blockquote .leading-quote {
     top: 0px; right: 0px;
     padding: 6px;
     background: #ffffff;
-    border-radius: 0 0 4px 4px;
-    border: 1px solid #aaa;
     border-top: none;
-    @include box-shadow(0 0px 2px #555 inset);
+    border-radius: 0 0 2px 2px;
     .icon {display: block;}
     .icon + .icon {margin-top: 6px;}
 }
@@ -318,3 +318,48 @@ blockquote .leading-quote {
 .flag-color.red {border-top: 4px solid $color_yemen_red;}
 .flag-color.white {border-top: 4px solid $color_yemen_white;}
 .flag-color.black {border-top: 4px solid $color_yemen_black;}
+
+#gallery {
+    padding: 20px;
+    .pictures {
+        padding-left: 2px;
+        font-size: 0;
+        img {
+            display: inline-block;
+            width: 290px;
+            margin: 4px;
+            padding: 4px;
+            cursor: pointer;
+            background: #ffffff;
+            @include box-shadow(0 0 8px #333);
+            &:hover {background: #f60;}
+        }
+    }
+}
+
+.blanket {
+    display: none;
+    position: fixed;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    background: #000000;
+    opacity: 0.8;
+}
+
+.zoom {
+    display: none;
+    position: fixed;
+    width: 100%; height: 100%;
+    top: 100px; left: 0;
+    .inner {
+        width: 960px;
+        margin: 0 auto;
+        text-align: center;
+        img {
+            padding: 16px;
+            background: #ffffff;
+            cursor: pointer;
+            /* @include box-shadow(0 0 16px #000 inset); */
+        }
+    }
+}

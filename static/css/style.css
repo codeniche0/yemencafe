@@ -190,19 +190,20 @@ blockquote .leading-quote {
   font-size: 16px; }
 #contact-page .first {
   margin-bottom: 12px; }
-#contact-page .col {
-  width: 45.5%;
+#contact-page .info {
+  margin-bottom: 10px; }
+#contact-page .block {
   padding: 8px 14px 10px 14px;
-  color: #333;
   background: #fbfbfb;
+  color: #333;
   -moz-box-shadow: 0 0 16px #aaaaaa;
   -webkit-box-shadow: 0 0 16px #aaaaaa;
   box-shadow: 0 0 16px #aaaaaa; }
+#contact-page .col {
+  width: 410px; }
   #contact-page .col p {
     float: left; }
-  #contact-page .col.second {
-    float: right; }
-  #contact-page .col .phone-number {
+  #contact-page .col.second, #contact-page .col .phone-number {
     float: right; }
 #contact-page h2 {
   margin: 0;
@@ -230,12 +231,8 @@ blockquote .leading-quote {
   right: 0px;
   padding: 6px;
   background: #ffffff;
-  border-radius: 0 0 4px 4px;
-  border: 1px solid #aaa;
   border-top: none;
-  -moz-box-shadow: 0 0px 2px #555555 inset;
-  -webkit-box-shadow: 0 0px 2px #555555 inset;
-  box-shadow: 0 0px 2px #555555 inset; }
+  border-radius: 0 0 2px 2px; }
   .icon-links .icon {
     display: block; }
   .icon-links .icon + .icon {
@@ -281,3 +278,48 @@ blockquote .leading-quote {
 
 .flag-color.black {
   border-top: 4px solid black; }
+
+#gallery {
+  padding: 20px; }
+  #gallery .pictures {
+    padding-left: 2px;
+    font-size: 0; }
+    #gallery .pictures img {
+      display: inline-block;
+      width: 290px;
+      margin: 4px;
+      padding: 4px;
+      cursor: pointer;
+      background: #ffffff;
+      -moz-box-shadow: 0 0 8px #333333;
+      -webkit-box-shadow: 0 0 8px #333333;
+      box-shadow: 0 0 8px #333333; }
+      #gallery .pictures img:hover {
+        background: #f60; }
+
+.blanket {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000000;
+  opacity: 0.8; }
+
+.zoom {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  left: 0; }
+  .zoom .inner {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center; }
+    .zoom .inner img {
+      padding: 16px;
+      background: #ffffff;
+      cursor: pointer;
+      /* @include box-shadow(0 0 16px #000 inset); */ }
