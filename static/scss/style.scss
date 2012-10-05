@@ -363,3 +363,17 @@ blockquote .leading-quote {
         }
     }
 }
+
+.codeniche-tag {
+    position: absolute;
+    bottom: 0; right: 0;
+    color: $color_cloud;
+    font-size: 13px;
+}
+
+.codeniche-name {
+    text-decoration: none;
+    font-weight: normal;
+    font-style: italic;
+    color: #ff8000;
+}
