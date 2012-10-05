@@ -168,7 +168,7 @@ blockquote .leading-quote {
 
 .fitted-page {
   position: relative;
-  min-height: 9999px;
+  min-height: 800px;
   padding: 20px 36px 20px 36px;
   background: url("../imgs/textures/scroll.png") top left repeat; }
   .fitted-page p {
