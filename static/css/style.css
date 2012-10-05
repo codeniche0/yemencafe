@@ -82,7 +82,8 @@ h1, h2 {
   background-image: -ms-linear-gradient(top, #eb8540, #e16817);
   background-image: -o-linear-gradient(top, #eb8540, #e16817);
   background-image: linear-gradient(to bottom, #eb8540, #e16817);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); }
   #nav ul {
     width: 960px;
     margin: 0 auto;
