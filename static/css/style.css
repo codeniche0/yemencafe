@@ -51,10 +51,10 @@ h1, h2 {
     /* margin-left: 460px; */ }
   #banner .logo-img {
     padding-top: 10px;
-    max-width: 200px; }
+    width: 200px; }
   #banner .logo-text {
     margin-top: 12px;
-    width: 960px; }
+    width: 891px; }
 
 .blinder {
   background: #111;
@@ -82,7 +82,6 @@ h1, h2 {
   background-image: -ms-linear-gradient(top, #eb8540, #e16817);
   background-image: -o-linear-gradient(top, #eb8540, #e16817);
   background-image: linear-gradient(to bottom, #eb8540, #e16817);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); }
   #nav ul {
     width: 960px;

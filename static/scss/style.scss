@@ -26,7 +26,6 @@ $color_yemen_black: #000000;
     background-image:     -ms-linear-gradient(top, $startcolor, $endcolor); // IE10
     background-image:      -o-linear-gradient(top, $startcolor, $endcolor); // Opera 11.10+
     background-image:         linear-gradient(to bottom, $startcolor, $endcolor); // CSS3
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); // IE9
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); // IE9
 }
 
@@ -90,11 +89,11 @@ h1, h2 {font-weight: normal;}
     }
     .logo-img {
         padding-top: 10px;
-        max-width: 200px;
+        width: 200px;
     }
     .logo-text {
         margin-top: 12px;
-        width: $width;
+        width: 891px;
     }
 }
 
