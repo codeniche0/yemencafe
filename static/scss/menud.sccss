@@ -1,0 +1,65 @@
+#main {
+    height: auto;
+    overflow-y: auto;
+    background: url("../imgs/textures/paper.jpg") top left repeat;
+}
+
+#footer {position: relative;}
+
+#menud {
+    min-height: 400px;
+    background: url("../imgs/textures/scroll.png") top left repeat;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+        margin: 10px 0;
+    }
+    #menu-groups {
+        margin: 10px 80px 0 0;
+        padding: 10px 16px;
+    }
+}
+
+#menu-groups {
+    width: 180px;
+    li {
+        cursor: pointer;
+        padding: 6px 20px;
+        margin: 0;
+        /* color: #eee; */
+    }
+    & .hover {
+        background: #333;
+        color: #fff;
+    }
+    & .active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+#menu-items {
+    margin-top: 10px;
+    width: 640px;
+    position: relative;
+    li {
+        position: relative;
+        margin: 18px 0;
+        & > div {margin: 4px 0;}
+    }
+}
+
+.food-name {font-weight: bold;}
+
+.food-price {
+    position: absolute;
+    top: -6px; right: 0;
+}
+
+.food-info {
+    clear: both;
+    width: 510px;
+}

@@ -1,0 +1,43 @@
+#nav,
+#dropdown{
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+}
+#nav li{
+    float:left;
+}
+
+?#nav li a{
+padding:.5em;
+color:#cc0000;
+ display:block;
+ font-size:1.5em;
+ text-align:center;   
+
+}
+#nav li a:hover{
+color:#fff;
+ text-decoration:underline;
+background:#cc0000;    
+}
+
+#dropdown{
+position:absolute;
+display:none;
+z-index:50;
+background:#fff;
+}
+
+#dropdown li{
+float:none;
+}
+#dropdown li a{
+color:#000;
+}
+#itemtwo:hover #dropdown{
+display:block;
+
+}
+?
