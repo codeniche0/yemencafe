@@ -26,7 +26,7 @@ $color_yemen_black: #000000;
     background-image:     -ms-linear-gradient(top, $startcolor, $endcolor); // IE10
     background-image:      -o-linear-gradient(top, $startcolor, $endcolor); // Opera 11.10+
     background-image:         linear-gradient(to bottom, $startcolor, $endcolor); // CSS3
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); // IE9
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); // IE9
 }
 
 @mixin box-shadow($values) {
@@ -89,11 +89,11 @@ h1, h2 {font-weight: normal;}
     }
     .logo-img {
         padding-top: 10px;
-        width: 200px;
+        max-width: 200px;
     }
     .logo-text {
         margin-top: 12px;
-        width: 891px;
+        width: $width;
     }
 }
 
@@ -210,7 +210,7 @@ blockquote .leading-quote {
 
 .fitted-page {
     position: relative;
-    min-height: 800px;
+    min-height: 9999px;
     padding: 20px 36px 20px 36px;
     background: url("../imgs/textures/scroll.png") top left repeat;
     p {
@@ -361,18 +361,4 @@ blockquote .leading-quote {
             cursor: pointer;
         }
     }
-}
-
-.codeniche-tag {
-    position: absolute;
-    bottom: 0; right: 0;
-    color: $color_cloud;
-    font-size: 13px;
-}
-
-.codeniche-name {
-    text-decoration: none;
-    font-weight: normal;
-    font-style: italic;
-    color: #ff8000;
 }

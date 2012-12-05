@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 
 <html>
 <head>
@@ -8,9 +8,18 @@
   {% if subpage == "menu.html" %}
     <link rel="stylesheet" href="static/css/menu.css" type="text/css" media="screen" />
   {% endif %}
+  {% if subpage == "menud.html" %}
+    <link rel="stylesheet" href="static/css/menud.css" type="text/css" media="screen" />
+  {% endif %}
   {% if subpage == "gallery.html" %}
     <link rel="stylesheet" href="static/css/gallery.css" type="text/css" media="screen" />
   {% endif %}
+  <STYLE type="text/css">
+#dropdown{position:absolute;display:none;z-index:50;background:#EB8540;border-style:outset;}
+#dropdown li{float:none;}
+#dropdown li a{font-weight: bold;text-decoration: none;color: #6E330B;text-shadow: 0 1px 0 #EE9457;   position: relative;border-bottom: 4px solid #D8B651;background-color: #EB8540;}
+#itemtwo:hover #dropdown{display:block;}
+</STYLE>
 </head>
 
 <body id="body">
@@ -18,6 +27,10 @@
   <div id="main">
 
     {% if subpage != "menu.html" and subpage != "gallery.html" %}
+      <img src="static/imgs/bg/bg_food.png" class="main-bg" />
+    {% endif %}
+	<!--i added this to see if texture will work-->
+	{% if subpage != "menud.html" and subpage != "gallery.html" %}
       <img src="static/imgs/bg/bg_food.png" class="main-bg" />
     {% endif %}
 
@@ -32,7 +45,18 @@
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="menu.html">Menu</a></li>
+		  <!-- herre start the code i improvised-->
+		 <li id="itemtwo" > <a href="#">Menu</a>
+    <ul id="dropdown"style="width:auto;margin-top:.5em;">
+     <li><a href="menud.html">Brooklyn-Downtown</a></li>
+     <li><a href="menu.html">Brooklyn-Bay Ridge</a></li>
+     </ul>
+      </li>
+		   <!-- here ends the code i improvised-->
+		  
+		  
+	
+		   
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
@@ -59,9 +83,9 @@
         <a class="yelp-icon icon" href="http://www.yelp.com/biz/yemen-cafe-brooklyn"></a>
       </div>
         <div class="col">
-          <h2>Cobble Hill Location</h2>
+          <h2>Downtown Brooklyn</h2>
           <p class="address">176 Atlantic Ave<br/>Brooklyn, NY 11201</p>
-          <p class="phone-number">(718) 834-9533</p>
+          <p class="phone-number">(718) 834-9533<br/>(718)624-6540</p>
         </div>
         <div class="col">
           <h2>Bay Ridge Location</h2>
@@ -71,20 +95,21 @@
         </div>
         <div class="col">
           <h2>Hours</h2>
-          <p class="hours">Open every day 10am to 11pm</p>
+          <p class="hours" style="text-decoration:underline;">Monday - Thursday 10am to 10:00pm<br/> Weekend 10am to 11:00pm</p>
         </div>
-        <div class="codeniche-tag">site by <a class="codeniche-name" href="http://codeniche.com">codeniche</a></div>
       </div>
     </div>
+
   </div>
 
   <!-- <div class="blinder left"></div> -->
   <!-- <div class="blinder right"></div> -->
 
-  <script type="text/javascript" src="static/js/jquery.min.js"></script>
-  <script type="text/javascript" src="static/js/underscore.min.js"></script>
-  <script type="text/javascript" src="static/js/menu.js"></script>
-  <script type="text/javascript" src="static/js/gallery.js"></script>
+  <script type="application/javascript" src="static/js/jquery.min.js"></script>
+  <script type="application/javascript" src="static/js/underscore.min.js"></script>
+  <script type="application/javascript" src="static/js/menu.js"></script>
+   <script type="application/javascript" src="static/js/menud.js"></script>
+  <script type="application/javascript" src="static/js/gallery.js"></script>
 
 </body>
 </html>

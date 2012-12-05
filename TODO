@@ -2,7 +2,16 @@ Added twitter, yelp, facebook, foursquare, g+ links
 Add email
 Add company link
 Fix hours for cobble hill location
+Add the same words as on menu
+Make header and footer background consistent
+
+Add nav links active and hover styles.
+
+Forget the background picture for now. It's fudging everything up. Standarize the styles.
+
+Make logo background shale color.
+Condense logo vertically.
+
+Show the active tab.
 
 Test on windows and IE.
-
-Compress all images, especially logo icon and logo text.
